@@ -96,7 +96,7 @@ function Human(props) {
   const {gameName, name, gameID, status} = human;
 
   return (
-    <div className={`${styles.HumanCard} ${ status === 3 ? `${styles.Leader}` : status === 2 ? `${styles.CoLoader}` : status === 1 ? `${styles.Elite}` : `${styles.Member}`}`}>
+    <div className={`${styles.HumanCard} ${ status === 3 ? `${styles.Leader}` : status === 2 ? `${styles.CoLeader}` : status === 1 ? `${styles.Elite}` : `${styles.Member}`}`}>
       <h3 style={{'margin': 0, 'marginRight': '5px'}}>{gameName}</h3>
       <h3 style={{'margin': 0, 'fontWeight': '200'}}>{`(${name})`}</h3>
       <h5 style={{'margin': 0, 'marginLeft': 'auto', 'alignSelf': 'center', 'fontWeight': '300'}}>
