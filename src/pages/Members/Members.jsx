@@ -45,33 +45,39 @@ function Card(props) {
   const { group } = props;
   const { name, sub, humans } = group;
 
-  const [data, setData] = useState();
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     let mounted = true;
 
+    let temp = [];
     var db = firebase.firestore();
-    db.collection("members")
-      .where("gameID", "in", humans)
+    for (let i = 0; i*10 < humans.length; ++i) {
+      var q = humans.slice(i*10, i*10 + 10);
+      db.collection("members")
+      .where("gameID", "in", q)
       .orderBy("status", "desc")
       .get()
       .then(function (querySnapshot) {
         if(mounted) {
-          let temp = [];
           querySnapshot.forEach(function (doc) {
             // doc.data() is never undefined for query doc snapshots
+            console.log(doc.data());
             temp.push(doc.data());
+            setData(prev => [...prev, doc.data()]);
           });
-          setData(temp);
         }
       })
       .catch(function (error) {
         console.log("Firebase Error: ", error);
       });
+    }
+    setData(temp);
+    console.log(data);
 
-      return function cleanup() {
-        mounted = false;
-      }
+    return function cleanup() {
+      mounted = false;
+    }
   }, []);
 
   return (
