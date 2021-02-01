@@ -1,0 +1,70 @@
+.Main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Card {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  width: 60%;
+  min-width: 300px;
+  max-width: 800px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  border: white 1px solid;
+}
+
+.Card:last-child {
+  margin-bottom: 0;
+}
+
+.Card h1 {
+  font-weight: 300;
+  margin: 5px 10px 5px 5px;
+}
+
+.Card h2 {
+  font-weight: 400;
+  color: grey;
+  margin: 5px 0 5px 0;
+}
+
+.Card .Title {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items:flex-end;
+  border-bottom: white 1px solid;
+}
+
+.HumanCard {
+  padding: 10px;
+  width: 100%;
+  height: min-content;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  transition: 0.15s;
+}
+
+.HumanCard:hover {
+  transform: scale(1.02) translateZ(0);
+}
+
+.Leader {
+  background: rgba(255,215,0,1);
+}
+
+.CoLeader {
+  background: rgba(114,42,230,1);
+}
+
+.Elite {
+  background: rgba(119,238,216,1);
+}
+
+.Member {
+  background: rgba(131,234,241,1);
+}

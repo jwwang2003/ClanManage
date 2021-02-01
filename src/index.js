@@ -1,4 +1,5 @@
 import React from 'react';
+import { h } from 'preact';
 import ReactDOM from 'react-dom';
 import App from './App.jsx';
 

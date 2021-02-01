@@ -1,0 +1,48 @@
+.ClanName {
+  padding: 20px;
+  width: min-content;
+  background: rgb(45, 60, 134);
+  border-radius: 10px;
+}
+
+.Top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+
+.Main {
+  width: 100%;
+  padding: 20px 0 0 0;
+}
+
+.Tabs {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.Tabs .item {
+  padding: 5px 20px 5px 20px;
+  border-bottom: rgba(255,255,255,0.5) 2px solid;
+  transition: 0.15s;
+}
+
+.Tabs .item:hover {
+  cursor: pointer;
+  user-select: none;
+  border-bottom: rgba(255,255,255,1) 2px solid;
+}
+
+.Tabs .item2 {
+  cursor: pointer;
+  user-select: none;
+  padding: 5px;
+  background: white;
+  color: black;
+}
